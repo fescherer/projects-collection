@@ -45,5 +45,8 @@
     "scss",
     "pcss",
     "postcss"
-  ]
+  ],
+
+  // Ignore Tailwind warnings
+  "css.lint.unknownAtRules": "ignore"
 }

@@ -6,5 +6,6 @@ module.exports = {
     '@stylistic/jsx-self-closing-comp': ['error'],
     'react/button-has-type': ['error'],
     'react/react-in-jsx-scope': 'off',
-  }
+  },
+  "ignorePatterns": ["**/*.css","**/*.scss"]
 }
