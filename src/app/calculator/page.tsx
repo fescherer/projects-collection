@@ -1,15 +1,35 @@
+'use client'
+
+import { useState } from "react"
+import { calculatorData } from "./btn"
+import { getResult } from "./fn"
+import { CalculatorProps } from "./types"
+
 export default function CalculatorPage() {
+  const [number1, setNumber1] = useState<undefined | string>()
+  const [number2, setNumber2] = useState<undefined | string>()
+  const [operator, setOperator] = useState('')
+
+
+  function result(item: CalculatorProps) {
+    if(item.type === 'digit' && !operator) setNumber1(prev => prev + item.value)
+    if(item.type === 'digit' && !!operator) setNumber2(prev => prev + item.value)
+    if(item.type === 'operator' && number1) setOperator(item.value)
+
+
+    if(number1 && number2 && operator) console.log(getResult(item, number1, number2))
+  }
 
   return (
-    <div>
-      <div className="dropdown">
-        <div tabIndex={0} role="button" className="btn btn-primary m-1 ">Click</div>
-        <ul tabIndex={0} className="menu dropdown-content z-[1] w-52 rounded-box bg-base-100 p-2 shadow">
-          <li><a>Item 1</a></li>
-          <li><a>Item 2</a></li>
-          <li />
-        </ul>
+    <div className='m-auto flex w-full max-w-lg flex-col items-center justify-center p-4'>
+      <div className='my-2 flex w-full justify-end rounded bg-slate-900 p-4'>{(number1 + operator + number2) || 0}</div>
+      <div className='grid w-full grid-cols-4 grid-rows-4 gap-2'>
+        {
+          calculatorData.map(item => (
+            <button type="button" onClick={() => result(item)} disabled={item.type === 'invalid'} key={item.value}>{item.value}</button>
+          ))
+        }
       </div>
     </div>
   )
-}  
+}
