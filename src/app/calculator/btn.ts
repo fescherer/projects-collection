@@ -75,7 +75,7 @@ export const calculatorData: CalculatorProps[] = [
   },
   {
     value: '.',
-    type: 'digit'
+    type: 'decimal-dot'
   },
   {
     value: '=',
