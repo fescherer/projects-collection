@@ -66,8 +66,8 @@ export const calculatorData: CalculatorProps[] = [
     type: 'operator'
   },
   {
-    value: '---',
-    type: 'invalid'
+    value: '-/+',
+    type: 'operator'
   },
   {
     value: '0',

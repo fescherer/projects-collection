@@ -1,6 +1,6 @@
 // File containing all calculator app logic
 
-import { CalculatorFunction } from "./types";
+import { CalculatorFunction} from "./types";
 
 const add: CalculatorFunction = (number1: number, number2: number) => number1 + number2
 const subtract: CalculatorFunction = (number1: number, number2: number) => number1 - number2
