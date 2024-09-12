@@ -1,9 +1,10 @@
 import { CalculatorProps } from "./types";
 
 export const calculatorData: CalculatorProps[] = [
+
   {
-    value: '--',
-    type: 'invalid'
+    value: '-/+',
+    type: 'operator'
   },
   {
     value: 'C',
@@ -14,7 +15,7 @@ export const calculatorData: CalculatorProps[] = [
     type: 'operator'
   },
   {
-    value: '-',
+    value: '/',
     type: 'operator'
   },
   {
@@ -30,7 +31,7 @@ export const calculatorData: CalculatorProps[] = [
     type: 'digit'
   },
   {
-    value: '+',
+    value: '*',
     type: 'operator'
   },
   {
@@ -46,7 +47,7 @@ export const calculatorData: CalculatorProps[] = [
     type: 'digit'
   },
   {
-    value: '/',
+    value: '-',
     type: 'operator'
   },
   {
@@ -62,11 +63,7 @@ export const calculatorData: CalculatorProps[] = [
     type: 'digit'
   },
   {
-    value: '*',
-    type: 'operator'
-  },
-  {
-    value: '-/+',
+    value: '+',
     type: 'operator'
   },
   {

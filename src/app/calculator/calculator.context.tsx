@@ -85,6 +85,7 @@ export function CalculatorProvider({ children }: PropsWithChildren) {
           setNumber1('')
           setNumber2('')
           setOperator('')
+          setCalcHistory([])
           break;
 
         default:
