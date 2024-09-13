@@ -9,7 +9,7 @@ export default function CalculatorPage() {
   const {number1, calcHistory, number2, operator, getResult} = useCalculatorContext()
 
   return (
-    <div className='m-auto flex w-full max-w-lg flex-col items-center justify-center p-4'>
+    <div className='m-auto flex w-full max-w-lg flex-col items-center justify-center rounded bg-white p-4 shadow-md'>
 
 
       <div className='my-2 flex w-full flex-col rounded bg-primary p-4'>
