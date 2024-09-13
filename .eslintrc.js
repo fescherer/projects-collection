@@ -7,5 +7,5 @@ module.exports = {
     'react/button-has-type': ['error'],
     'react/react-in-jsx-scope': 'off',
   },
-  "ignorePatterns": ["**/*.css","**/*.scss"]
+  "ignorePatterns": ["**/*.css","**/*.scss","**/*.mdx"]
 }
