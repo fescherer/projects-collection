@@ -1,10 +1,6 @@
+import { LinksType } from "@/@types/links.type";
 import Link from "next/link";
 import { PropsWithChildren } from "react";
-
-type LinksType = {
-  name: string
-  href: string
-}
 
 type ProjectWrapperComponentType = {
   title: string

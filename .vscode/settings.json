@@ -48,5 +48,8 @@
   ],
 
   // Ignore Tailwind warnings
-  "css.lint.unknownAtRules": "ignore"
+  "css.lint.unknownAtRules": "ignore",
+
+  // Word Wrapping
+  "editor.wordWrap": "on"
 }
