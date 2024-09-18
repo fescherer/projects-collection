@@ -10,7 +10,7 @@ type ProjectWrapperComponentType = {
 
 export default function ProjectWrapperComponent({children, title, description, links}: PropsWithChildren<ProjectWrapperComponentType>) {
   return (
-    <section className="relative m-auto flex size-full max-w-2xl flex-col">
+    <section className="relative m-auto flex size-full max-w-2xl flex-col px-4 py-12">
       <div className="text-center">
         <h2 className="my-4 text-4xl font-medium">{title}</h2>
         <p className="my-2">{description}</p>
@@ -18,7 +18,7 @@ export default function ProjectWrapperComponent({children, title, description, l
         <div className="my-4 flex w-full justify-center gap-4">
           {
             links.map(link => (
-              <Link href={link.href} key={link.href+link.name} className="btn-secondary link link-neutral">{link.name}</Link>
+              <Link href={link.href} key={link.href+link.name} className="link">{link.name}</Link>
             ))
           }
         </div>
