@@ -4,6 +4,8 @@ import "./globals.css";
 import { PropsWithChildren } from "react";
 import { Header } from "@/components/header.component";
 import { Footer } from "@/components/footer.component";
+import Tailwind from '@/../tailwind.config'
+import { cookies } from "next/headers";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -22,8 +24,12 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children,}: Readonly<PropsWithChildren>) {
+  const theme = Tailwind.daisyui.themes
+  const themeCookie = cookies().get('theme')
+  const currentTheme = themeCookie ? themeCookie.value : theme[0]
+
   return (
-    <html lang="en" data-theme="dark">
+    <html lang="en" data-theme={currentTheme}>
       <body className={`${geistSans.variable} ${geistMono.variable} custom-background flex size-full min-h-screen flex-col antialiased`}>
         <Header />
         <main className="flex min-h-full flex-1 flex-col">{children}</main>
